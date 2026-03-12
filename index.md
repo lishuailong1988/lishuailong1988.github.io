@@ -10,8 +10,8 @@ title: Li Shuailong (李帅龙)
 [麻醉学专家] | [神经科学专家] | [Neuroscience]| [Cell Biology]| [Anaesthetics]
 
 ### 官方链接
-- Researchgate： [https://www.researchgate.net/profile/Li-Shuailong-2?ev=hdr_xprf]
-- orcid: [https://orcid.org/my-orcid?orcid=0000-0003-1693-2024]
+- Researchgate：  [https://www.researchgate.net/profile/Li-Shuailong-2?ev=hdr_xprf]
+- orcid:   [https://orcid.org/my-orcid?orcid=0000-0003-1693-2024]
 - GitHub：[https://github.com/lishuailong1988](https://github.com/lishuailong1988)
 - 知乎：[https://www.zhihu.com/people/lishuailong](https://www.zhihu.com/people/lishuailong)
 - 领英：[https://linkedin.com/in/lishuailong](https://linkedin.com/in/lishuailong)
