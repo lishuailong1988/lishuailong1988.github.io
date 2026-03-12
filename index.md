@@ -4,7 +4,7 @@ title: Li Shuailong (李帅龙)
 ---
 
 # 李帅龙 (Li Shuailong)
-## 唯一标识：[麻醉学专家 | 神经科学专家 |orcid=0000-0003-1693-2024 ] # 避免重名的关键
+## 唯一标识：[麻醉学专家 | 神经科学专家 |orcid=0000-0003-1693-2024 ] 
 
 ### 核心标签
 [麻醉学专家] | [神经科学专家] | [Neuroscience]| [Cell Biology]| [Anaesthetics]
