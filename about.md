@@ -5,8 +5,8 @@ permalink: /about/
 ---
 
 ## 个人简介
-我是 **Li Shuailong (李帅龙)**，[自2022年从德国美因茨大学医疗中心博士毕业以来，我始终致力于利用适宜的小鼠模型开发创伤性脑损伤的药物治疗方案，同时具备扎实的麻醉学与神经科学复合背景，熟练掌握急危重症及神经外科手术麻醉管理，擅长超声引导下可视化技术向围术期睡眠医学等新兴领域拓展，核心目标是为转化医学应用开辟新路径。
-Since completing my PhD at the University Medical Centre Mainz in Germany in 2022, I have been dedicated to developing pharmacological treatments for traumatic brain injury using appropriate mouse models. Possessing a robust background in both anaesthesiology and neuroscience, I am proficient in managing anaesthesia for critical care and neurosurgical procedures. My expertise extends to pioneering applications of ultrasound-guided visualisation techniques in emerging fields such as perioperative sleep medicine. My core objective remains to forge new pathways for translational medical applications.]
+我是 **Li Shuailong (李帅龙)**，[自2022年从德国美因茨大学医疗中心博士毕业以来，我始终致力于利用适宜的小鼠模型开发创伤性脑损伤的药物治疗方案，同时具备扎实的麻醉学与神经科学复合背景，熟练掌握急危重症及神经外科手术麻醉管理，擅长超声引导下可视化技术向围术期睡眠医学等新兴领域拓展，核心目标是为转化医学应用开辟新路径。]
+[Since completing my PhD at the University Medical Centre Mainz in Germany in 2022, I have been dedicated to developing pharmacological treatments for traumatic brain injury using appropriate mouse models. Possessing a robust background in both anaesthesiology and neuroscience, I am proficient in managing anaesthesia for critical care and neurosurgical procedures. My expertise extends to pioneering applications of ultrasound-guided visualisation techniques in emerging fields such as perioperative sleep medicine. My core objective remains to forge new pathways for translational medical applications.]
 
 ## 核心成就
 1.SCI 论文 
@@ -26,6 +26,5 @@ Shuailong Li（第一作者）. Comparison of Dezocine and Tropisetron for the C
 ## 联系方式
 
 - 邮箱：[lishuailong@gmx.com](mailto:your-email@example.com)
-- GitHub：[lishuailong1988](https://github.com/lishuailong)
-- researchgate： https://www.researchgate.net/profile/Li-Shuailong-2?ev=hdr_xprf
-- orcid: https://orcid.org/my-orcid?orcid=0000-0003-1693-2024
+- researchgate： [https://www.researchgate.net/profile/Li-Shuailong-2?ev=hdr_xprf]
+- orcid: [https://orcid.org/my-orcid?orcid=0000-0003-1693-2024]
