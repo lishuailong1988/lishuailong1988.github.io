@@ -169,46 +169,67 @@
     </div>
 
     <!-- --- 图片轮播HTML结构 --- -->
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/头像.jpg" alt="轮播图1">
-      </div>
-      <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/答辩.jpg" alt="轮播图2">
-      </div>
-      <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/答辩委员会.jpg" alt="轮播图3">
-      </div>
-       <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/毕业照.jpg" alt="轮播图4">
-      </div>
-       <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/工作服.jpg" alt="轮播图5>
-      </div>
-      <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/博士三人.jpg" alt="轮播图6">
-      </div>
-       <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/与院士.jpg" alt="轮播图7">
-      </div>
-       <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/与Neo朋友.jpg" alt="轮播图8">
-      </div>
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-    </div>
-    <br>
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-       <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-         <span class="dot" onclick="currentSlide(6)"></span>
-          <span class="dot" onclick="currentSlide(7)"></span>
-           <span class="dot" onclick="currentSlide(8)"></span>
-    </div>
-    <!-- --- 轮播结构结束 --- -->
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="https://lishuailong1988.github.io/assets/images/banner1.jpg" alt="毕业照-美因茨大学医学院">
+  </div>
+  <div class="mySlides fade">
+    <img src="https://lishuailong1988.github.io/assets/images/banner2.jpg" alt="与同学合影-美因茨夜晚">
+  </div>
+  <div class="mySlides fade">
+    <img src="https://lishuailong1988.github.io/assets/images/banner3.jpg" alt="学术汇报-小胶质细胞研究">
+  </div>
+  <div class="mySlides fade">
+    <img src="https://lishuailong1988.github.io/assets/images/banner4.jpg" alt="与导师及团队合影">
+  </div>
+  <div class="mySlides fade">
+    <img src="https://lishuailong1988.github.io/assets/images/banner5.jpg" alt="生活照-弹钢琴">
+  </div>
+  <div class="mySlides fade">
+    <img src="https://lishuailong1988.github.io/assets/images/banner6.jpg" alt="白大褂照-实验室外">
+  </div>
+  <div class="mySlides fade">
+    <img src="https://lishuailong1988.github.io/assets/images/banner7.jpg" alt="双人毕业照">
+  </div>
+  <div class="mySlides fade">
+    <img src="https://lishuailong1988.github.io/assets/images/banner8.jpg" alt="学术会议合影-EJN/FENS">
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+<!-- --- 轮播结构结束 --- -->
+
+<!-- --- 图片轮播JS逻辑 --- -->
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) { showSlides(slideIndex += n); }
+    function currentSlide(n) { showSlides(slideIndex = n); }
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+      for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000, slideIndex += 1); // 4秒自动切换一次
+    }
+</script>
+<!-- --- 轮播逻辑结束 --- -->
 
     <div class="profile-section">
         <h2 class="section-title">官方学术与社交账号</h2>
