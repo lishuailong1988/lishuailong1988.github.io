@@ -171,13 +171,28 @@
     <!-- --- 图片轮播HTML结构 --- -->
     <div class="slideshow-container">
       <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/IMG-20220711-WA0016.jpg" alt="轮播图1">
+        <img src="https://lishuailong1988.github.io/assets/images/头像.jpg" alt="轮播图1">
       </div>
       <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/banner2.jpg" alt="轮播图2">
+        <img src="https://lishuailong1988.github.io/assets/images/答辩.jpg" alt="轮播图2">
       </div>
       <div class="mySlides fade">
-        <img src="https://lishuailong1988.github.io/assets/images/banner3.jpg" alt="轮播图3">
+        <img src="https://lishuailong1988.github.io/assets/images/答辩委员会.jpg" alt="轮播图3">
+      </div>
+       <div class="mySlides fade">
+        <img src="https://lishuailong1988.github.io/assets/images/毕业照.jpg" alt="轮播图4">
+      </div>
+       <div class="mySlides fade">
+        <img src="https://lishuailong1988.github.io/assets/images/工作服.jpg" alt="轮播图5>
+      </div>
+      <div class="mySlides fade">
+        <img src="https://lishuailong1988.github.io/assets/images/博士三人.jpg" alt="轮播图6">
+      </div>
+       <div class="mySlides fade">
+        <img src="https://lishuailong1988.github.io/assets/images/与院士.jpg" alt="轮播图7">
+      </div>
+       <div class="mySlides fade">
+        <img src="https://lishuailong1988.github.io/assets/images/与Neo朋友.jpg" alt="轮播图8">
       </div>
       <a class="prev" onclick="plusSlides(-1)">❮</a>
       <a class="next" onclick="plusSlides(1)">❯</a>
@@ -187,6 +202,11 @@
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
+       <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+         <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+           <span class="dot" onclick="currentSlide(8)"></span>
     </div>
     <!-- --- 轮播结构结束 --- -->
 
