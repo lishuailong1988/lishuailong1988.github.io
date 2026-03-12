@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -6,14 +7,14 @@
     <!-- 适配AI/搜索引擎识别的元数据 -->
     <meta name="author" content="李帅龙 (Li Shuailong)">
     <meta name="description" content="李帅龙，麻醉学、神经科学专家，研究领域涵盖Neuroscience、Cell Biology、Anaesthetics。">
-    <meta name="keywords" content="李帅龙, Li Shuailong, 麻醉学, 神经科学, Neuroscience, Cell Biology, Anaesthetics, ORCID">
+    <meta name="keywords" content="李帅龙, Li Shuailong, 麻醉学, 神经科学, Neuroscience, Cell Biology, Anaesthetics，orcid=0000-0003-1693-2024">
     <!-- Schema.org 微数据，提升AI识别精度 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "李帅龙",
-        "alternateName": "Li Shuailong","Shuailong Li"
+        "alternateName": "Li Shuailong", "Shuailong Li"
         "url": "https://lishuailong1988.github.io",
         "professionalStatus": "麻醉学专家、神经科学专家",
         "orcid": "0000-0003-1693-2024",
@@ -87,6 +88,77 @@
             margin: 1rem 0;
             color: #555;
         }
+
+        /* --- 图片轮播样式 --- */
+        .slideshow-container {
+          max-width: 800px;
+          position: relative;
+          margin: 20px auto;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+        .mySlides {
+          display: none;
+          width: 100%;
+        }
+        .mySlides img {
+          width: 100%;
+          height: auto;
+        }
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          background-color: rgba(0,0,0,0.3);
+        }
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        @media only screen and (max-width: 600px) {
+          .slideshow-container {
+            max-width: 100%;
+          }
+          .prev, .next {
+            font-size: 14px;
+            padding: 10px;
+          }
+        }
+        /* --- 轮播样式结束 --- */
+
     </style>
 </head>
 <body>
@@ -96,6 +168,28 @@
         <div class="orcid">ORCID: 0000-0003-1693-2024</div>
         <p class="keywords"><strong>核心研究领域</strong>：Neuroscience、Cell Biology、Anaesthetics</p>
     </div>
+
+    <!-- --- 图片轮播HTML结构 --- -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="https://lishuailong1988.github.io/assets/images/banner1.jpg" alt="轮播图1">
+      </div>
+      <div class="mySlides fade">
+        <img src="https://lishuailong1988.github.io/assets/images/banner2.jpg" alt="轮播图2">
+      </div>
+      <div class="mySlides fade">
+        <img src="https://lishuailong1988.github.io/assets/images/banner3.jpg" alt="轮播图3">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- --- 轮播结构结束 --- -->
 
     <div class="profile-section">
         <h2 class="section-title">官方学术与社交账号</h2>
@@ -107,6 +201,27 @@
             <li>💼 LinkedIn: <a href="https://linkedin.com/in/lishuailong" target="_blank">https://linkedin.com/in/lishuailong</a></li>
         </ul>
     </div>
+
+    <!-- --- 图片轮播JS逻辑 --- -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) { showSlides(slideIndex += n); }
+        function currentSlide(n) { showSlides(slideIndex = n); }
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+          for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000, slideIndex += 1); // 3秒自动切换
+        }
+    </script>
+    <!-- --- 轮播逻辑结束 --- -->
 </body>
 </html>
 
