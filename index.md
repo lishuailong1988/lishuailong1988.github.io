@@ -171,28 +171,28 @@
     <!-- --- 图片轮播HTML结构 --- -->
 <div class="slideshow-container">
   <div class="mySlides fade">
-    <img src="https://lishuailong1988.github.io/assets/images/banner1.jpg" alt="头像">
+    <img src="https://lishuailong1988.github.io/assets/images/头像.jpg" alt="头像">
   </div>
   <div class="mySlides fade">
-    <img src="https://lishuailong1988.github.io/assets/images/banner2.jpg" alt="与同学合影-美因茨夜晚">
+    <img src="https://lishuailong1988.github.io/assets/images/答辩.jpg" alt="学术汇报-小胶质细胞研究">
   </div>
   <div class="mySlides fade">
-    <img src="https://lishuailong1988.github.io/assets/images/banner3.jpg" alt="学术汇报-小胶质细胞研究">
+    <img src="https://lishuailong1988.github.io/assets/images/答辩委员会.jpg" alt="与导师及团队合影">
   </div>
   <div class="mySlides fade">
-    <img src="https://lishuailong1988.github.io/assets/images/banner4.jpg" alt="与导师及团队合影">
+    <img src="https://lishuailong1988.github.io/assets/images/工作服.jpg" alt="白大褂照">
   </div>
   <div class="mySlides fade">
-    <img src="https://lishuailong1988.github.io/assets/images/banner5.jpg" alt="生活照-弹钢琴">
+    <img src="https://lishuailong1988.github.io/assets/images/弹琴.jpg" alt="生活照-弹钢琴">
   </div>
   <div class="mySlides fade">
-    <img src="https://lishuailong1988.github.io/assets/images/banner6.jpg" alt="白大褂照">
+    <img src="https://lishuailong1988.github.io/assets/images/三博士.jpg" alt="三人照">
   </div>
   <div class="mySlides fade">
-    <img src="https://lishuailong1988.github.io/assets/images/banner7.jpg" alt="与海博">
+    <img src="https://lishuailong1988.github.io/assets/images/与海博.jpg" alt="与海博">
   </div>
   <div class="mySlides fade">
-    <img src="https://lishuailong1988.github.io/assets/images/banner8.jpg" alt="学术会议合影-EJN/FENS">
+    <img src="https://lishuailong1988.github.io/assets/images/与Neo朋友.jpg" alt="学术会议合影-EJN/FENS">
   </div>
   <a class="prev" onclick="plusSlides(-1)">❮</a>
   <a class="next" onclick="plusSlides(1)">❯</a>
