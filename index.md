@@ -300,23 +300,22 @@
             <div class="source">数据来源：Google Scholar / Web of Science</div>
         </div>
 
-        <!-- 赞助：支付宝 + 微信 -->
-        <div class="card donate-box">
-            <div class="sidebar-title">☕ Donation 赞助</div>
-            <div class="donate-desc">如果我的内容对你有帮助，欢迎支持</div>
-            <div class="pay-row">
-    <div>
-        <img src="https://mirror.ghproxy.com/raw.githubusercontent.com/lishuailong1988/lishuailong1988/main/alipay.jpg" alt="支付宝">
-        <div style="text-align:center; font-size:12px; color:#666;">支付宝</div>
-    </div>
-    <div>
-        <img src="https://mirror.ghproxy.com/raw.githubusercontent.com/lishuailong1988/lishuailong1988/main/wechat.jpg" alt="微信">
-        <div style="text-align:center; font-size:12px; color:#666;">微信</div>
-    </div>
-            </div>
-            <div class="donate-note">扫码赞助 | 金额随意 | 感谢支持</div>
+        <!-- 赞助我：支付宝 + 微信 -->
+<div class="card donate-box">
+    <div class="sidebar-title">☕ 赞助我</div>
+    <div class="donate-desc">如果我的内容对你有帮助，欢迎支持</div>
+    <div class="pay-row">
+        <div>
+            <img src="alipay.jpg" alt="支付宝" style="width:100px; height:100px;">
+            <div style="text-align:center; font-size:12px; color:#666; margin-top:4px;">支付宝</div>
+        </div>
+        <div>
+            <img src="wechat.jpg" alt="微信" style="width:100px; height:100px;">
+            <div style="text-align:center; font-size:12px; color:#666; margin-top:4px;">微信</div>
         </div>
     </div>
+    <div class="donate-note">扫码赞助 | 金额随意 | 感谢支持</div>
+</div>
 </div>
 
 <div class="counter" id="visitCount">网站累计访问：0 次</div>
