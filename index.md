@@ -3,11 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>李帅龙 - 麻醉学 & 神经科学专家</title>
-    <!-- 适配AI/搜索引擎识别的元数据 -->
-    <meta name="author" content="李帅龙 (Li Shuailong)">
-    <meta name="description" content="李帅龙，麻醉学、神经科学专家，研究领域涵盖Neuroscience、Cell Biology、Anaesthetics。">
-    <meta name="keywords" content="李帅龙, Li Shuailong, 麻醉学, 神经科学, Neuroscience, Cell Biology, Anaesthetics, ORCID">
-    <!-- Schema.org 微数据，提升AI识别精度 -->
+    <meta name="author" content="李帅龙">
+    <meta name="description" content="麻醉学、神经科学专家学术主页">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -17,219 +14,216 @@
         "url": "https://lishuailong1988.github.io",
         "professionalStatus": "麻醉学专家、神经科学专家",
         "orcid": "0000-0003-1693-2024",
-        "keywords": ["Neuroscience", "Cell Biology", "Anaesthetics"],
+        "keywords": ["Neuroscience","Cell Biology","Anaesthetics"],
         "sameAs": [
             "https://www.researchgate.net/profile/Li-Shuailong-2",
-            "https://orcid.org/my-orcid?orcid=0000-0003-1693-2024",
-            "https://github.com/lishuailong1988",
-            "https://www.zhihu.com/people/lishuailong",
-            "https://linkedin.com/in/lishuailong"
+            "https://orcid.org/0000-0003-1693-2024",
+            "https://github.com/lishuailong1988"
         ]
     }
     </script>
     <style>
-        /* 合并body样式：德国国旗背景 + 基础样式，避免冲突 */
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin:0; padding:0;
+            box-sizing:border-box;
+            font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         body {
-            /* 德国国旗渐变背景 - 黑红金三色渐变 */
-            background: linear-gradient(135deg, #000000 0%, #000000 33%, #FF0000 33%, #FF0000 66%, #FFCC00 66%, #FFCC00 100%);
-            background-attachment: fixed; /* 背景固定，滚动不位移 */
-            padding: 2rem 0; /* 增加上下内边距，避免内容贴边 */
-            /* 基础样式 */
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            color: #333;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #000 0%, #000 33%, #F00 33%, #F00 66%, #FC0 66%, #FC0 100%);
+            background-attachment: fixed;
+            color:#333;
+            line-height:1.6;
+            padding:2rem 1rem;
         }
-        /* 内容容器加白色背景，保证文字可读性 */
-        .main-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 2rem 1rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        .page-wrap {
+            max-width:1100px;
+            margin:0 auto;
+            display:flex;
+            gap:2rem;
+        }
+        .main {
+            flex:3;
+            background:#fff;
+            padding:2rem;
+            border-radius:12px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        }
+        .sidebar {
+            flex:1;
+            background:#fff;
+            padding:1.5rem;
+            border-radius:12px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+            border:2px solid #FFCC00;
+        }
+        .sidebar-title {
+            font-size:1.2rem;
+            font-weight:bold;
+            text-align:center;
+            margin-bottom:1rem;
+            padding-bottom:0.5rem;
+            border-bottom:1px solid #eee;
+        }
+        .data-row {
+            margin:1.2rem 0;
+            text-align:center;
+        }
+        .data-name {
+            font-size:0.9rem;
+            color:#666;
+        }
+        .data-num {
+            font-size:2rem;
+            font-weight:bold;
+            color:#FF0000;
+        }
+        .source {
+            font-size:0.8rem;
+            color:#999;
+            text-align:center;
+            margin-top:1rem;
         }
         .profile-header {
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eee;
+            border-bottom:1px solid #eee;
+            padding-bottom:1rem;
+            margin-bottom:2rem;
         }
         .name {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            font-size:2rem;
+            margin-bottom:0.5rem;
         }
         .title {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+            color:#666;
+            margin-bottom:1rem;
         }
         .orcid {
-            display: inline-block;
-            padding: 0.3rem 0.8rem;
-            background: #f5f5f5;
-            border-radius: 4px;
-            font-family: monospace;
-            margin-bottom: 1rem;
+            background:#f5f5f5;
+            padding:0.3rem 0.8rem;
+            border-radius:4px;
+            display:inline-block;
+            margin-bottom:1rem;
         }
-        .section-title {
-            font-size: 1.3rem;
-            margin: 1.5rem 0 1rem;
-            color: #222;
+        .nav {
+            margin:1rem 0;
+            text-align:center;
+            font-weight:bold;
         }
-        .link-list {
-            list-style: none;
+        .nav a {
+            margin:0 1rem;
+            color:#000;
+            text-decoration:none;
         }
-        .link-list li {
-            margin: 0.5rem 0;
+        .nav a:hover {
+            color:red;
         }
-        .link-list a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        .link-list a:hover {
-            text-decoration: underline;
-        }
-        .keywords {
-            margin: 1rem 0;
-            color: #555;
-        }
-
-        /* --- 图片轮播核心样式 - 自动统一大小 --- */
         .slideshow-container {
-          max-width: 800px;
-          position: relative;
-          margin: 20px auto;
-          border-radius: 8px;
-          overflow: hidden;
-          background-color: #f0f0f0; /* 加载背景色 */
+            position:relative;
+            border-radius:8px;
+            overflow:hidden;
+            background:#f0f0f0;
+            margin:20px 0;
         }
-        /* 统一控制图片容器和图片样式 */
         .mySlides {
-          display: none;
-          width: 100%;
-          height: 500px; /* 固定统一高度 */
-          overflow: hidden;
-          animation: fade 1.5s ease; /* 新增：轮播切换动画 */
-        }
-        /* 轮播淡入动画 */
-        @keyframes fade {
-          from {opacity: 0.4} 
-          to {opacity: 1}
+            display:none;
+            height:480px;
         }
         .mySlides img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; /* 核心：保持比例并填满容器，避免变形 */
-          object-position: center; /* 居中显示 */
+            width:100%;
+            height:100%;
+            object-fit:cover;
         }
-        .prev, .next {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          width: auto;
-          margin-top: -22px;
-          padding: 16px;
-          color: white;
-          font-weight: bold;
-          font-size: 18px;
-          transition: 0.6s ease;
-          border-radius: 0 3px 3px 0;
-          user-select: none;
-          background-color: rgba(0,0,0,0.3);
+        .prev,.next {
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            padding:16px;
+            color:white;
+            background:rgba(0,0,0,0.3);
+            cursor:pointer;
+            user-select:none;
+            border-radius:4px;
         }
-        .next {
-          right: 0;
-          border-radius: 3px 0 0 3px;
-        }
-        .prev:hover, .next:hover {
-          background-color: rgba(0,0,0,0.8);
-        }
+        .next {right:0;}
         .dot {
-          cursor: pointer;
-          height: 15px;
-          width: 15px;
-          margin: 0 2px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
+            width:15px; height:15px;
+            background:#bbb;
+            border-radius:50%;
+            display:inline-block;
+            margin:0 2px;
+            cursor:pointer;
         }
-        .active, .dot:hover {
-          background-color: #717171;
+        .dot.active,.dot:hover {
+            background:#717171;
         }
-        /* 底部版权栏样式 */
+        .link-list {
+            list-style:none;
+            margin-top:1rem;
+        }
+        .link-list li {
+            margin:0.5rem 0;
+        }
+        .link-list a {
+            color:#0366d6;
+            text-decoration:none;
+        }
         .footer {
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
+            border-top:1px solid #eee;
+            padding-top:1rem;
+            margin-top:2rem;
+            text-align:center;
+            font-size:0.9rem;
+            color:#666;
         }
-        .footer a {
-            color: #0366d6;
-            text-decoration: none;
-            margin: 0 0.5rem;
+        .counter {
+            position:fixed;
+            right:20px;
+            bottom:20px;
+            background:#000;
+            color:#fff;
+            padding:8px 12px;
+            border-radius:8px;
+            font-size:0.8rem;
+            z-index:999;
         }
-        .footer a:hover {
-            text-decoration: underline;
+        @media(max-width:768px){
+            .page-wrap{flex-direction:column;}
         }
     </style>
 </head>
+
 <body>
-    <div class="main-container">
+
+<div class="nav">
+    <a href="/">首页</a>
+    <a href="/about/">关于我</a>
+    <a href="/blog/">博客</a>
+</div>
+
+<div class="page-wrap">
+    <div class="main">
         <div class="profile-header">
             <h1 class="name">李帅龙 / Li Shuailong</h1>
             <p class="title">麻醉学专家、神经科学专家</p>
             <div class="orcid">ORCID: 0000-0003-1693-2024</div>
-            <p class="keywords"><strong>核心研究领域</strong>：Neuroscience、Cell Biology、Anaesthetics</p>
+            <p><strong>核心研究领域：</strong>Neuroscience、Cell Biology、Anaesthetics</p>
         </div>
 
-        <!-- --- 10张图片轮播HTML结构 --- -->
         <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="https://lishuailong1988.github.io/assets/images/banner1.jpg" alt="毕业照-学士服">
-            </div>
-            <div class="mySlides fade">
-                <img src="https://lishuailong1988.github.io/assets/images/banner2.jpg" alt="白大褂-美因茨大学">
-            </div>
-            <div class="mySlides fade">
-                <img src="https://lishuailong1988.github.io/assets/images/banner3.jpg" alt="学术汇报-小胶质细胞研究">
-            </div>
-            <div class="mySlides fade">
-                <img src="https://lishuailong1988.github.io/assets/images/banner4.jpg" alt="与导师团队合影">
-            </div>
-            <div class="mySlides fade">
-                <img src="https://lishuailong1988.github.io/assets/images/banner5.jpg" alt="弹钢琴-生活照">
-            </div>
-            <div class="mySlides fade">
-                <img src="https://lishuailong1988.github.io/assets/images/banner6.jpg" alt="白大褂室外照">
-            </div>
-            <div class="mySlides fade">
-                <img src="https://lishuailong1988.github.io/assets/images/banner7.jpg" alt="毕业照-红黑学位服">
-            </div>
-            <div class="mySlides fade">
-                <img src="https://lishuailong1988.github.io/assets/images/banner8.jpg" alt="双人毕业照">
-            </div>
-            <div class="mySlides fade">
-                <img src="https://lishuailong1988.github.io/assets/images/banner9.jpg" alt="学术会议合影">
-            </div>
-            <div class="mySlides fade">
-                <img src="https://lishuailong1988.github.io/assets/images/banner10.jpg" alt="学术会议-EJN/FENS">
-            </div>
+            <div class="mySlides"><img src="/assets/images/banner1.jpg"></div>
+            <div class="mySlides"><img src="/assets/images/banner2.jpg"></div>
+            <div class="mySlides"><img src="/assets/images/banner3.jpg"></div>
+            <div class="mySlides"><img src="/assets/images/banner4.jpg"></div>
+            <div class="mySlides"><img src="/assets/images/banner5.jpg"></div>
+            <div class="mySlides"><img src="/assets/images/banner6.jpg"></div>
+            <div class="mySlides"><img src="/assets/images/banner7.jpg"></div>
+            <div class="mySlides"><img src="/assets/images/banner8.jpg"></div>
+            <div class="mySlides"><img src="/assets/images/banner9.jpg"></div>
+            <div class="mySlides"><img src="/assets/images/banner10.jpg"></div>
             <a class="prev" onclick="plusSlides(-1)">❮</a>
             <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
-        <br>
-        <div style="text-align:center">
+
+        <div style="text-align:center; margin:10px 0;">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
@@ -241,64 +235,58 @@
             <span class="dot" onclick="currentSlide(9)"></span>
             <span class="dot" onclick="currentSlide(10)"></span>
         </div>
-        <!-- --- 轮播结构结束 --- -->
 
-        <div class="profile-section">
-            <h2 class="section-title">官方学术与社交账号</h2>
-            <ul class="link-list">
-                <li>🔬 ResearchGate: <a href="https://www.researchgate.net/profile/Li-Shuailong-2" target="_blank">https://www.researchgate.net/profile/Li-Shuailong-2</a></li>
-                <li>📇 ORCID: <a href="https://orcid.org/my-orcid?orcid=0000-0003-1693-2024" target="_blank">https://orcid.org/my-orcid?orcid=0000-0003-1693-2024</a></li>
-                <li>💻 GitHub: <a href="https://github.com/lishuailong1988" target="_blank">https://github.com/lishuailong1988</a></li>
-                <li>📝 知乎: <a href="https://www.zhihu.com/people/lishuailong" target="_blank">https://www.zhihu.com/people/lishuailong</a></li>
-                <li>💼 LinkedIn: <a href="https://linkedin.com/in/lishuailong" target="_blank">https://linkedin.com/in/lishuailong</a></li>
-            </ul>
-        </div>
+        <h3>官方学术与社交账号</h3>
+        <ul class="link-list">
+            <li>🔬 ResearchGate: <a href="https://www.researchgate.net/profile/Li-Shuailong-2" target="_blank">https://www.researchgate.net/profile/Li-Shuailong-2</a></li>
+            <li>📇 ORCID: <a href="https://orcid.org/my-orcid?orcid=0000-0003-1693-2024" target="_blank">https://orcid.org/my-orcid?orcid=0000-0003-1693-2024</a></li>
+            <li>💻 GitHub: <a href="https://github.com/lishuailong1988" target="_blank">https://github.com/lishuailong1988</a></li>
+            <li>📝 知乎: <a href="https://www.zhihu.com/people/lishuailong" target="_blank">https://www.zhihu.com/people/lishuailong</a></li>
+            <li>💼 LinkedIn: <a href="https://linkedin.com/in/lishuailong" target="_blank">https://linkedin.com/in/lishuailong</a></li>
+        </ul>
 
-        <p style="margin-top: 1rem;">更多详情请查看 <a href="/about/">关于我</a></p>
-
-        <!-- 底部版权栏 -->
         <div class="footer">
-            © MD since 2007 Li Shuailong | <a href="/">首页</a> | <a href="/关于我/">about</a>
+            © MD since 2007 Li Shuailong | <a href="/">首页</a> | <a href="/about/">关于我</a> | <a href="/blog/">博客</a>
         </div>
-
-        <!-- --- 图片轮播JS逻辑 --- -->
-        <script>
-            let slideIndex = 0; // 从0开始索引，兼容更多图片
-            showSlides();
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n - 1); // 对应HTML索引
-            }
-
-            function showSlides() {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                
-                // 自动循环逻辑
-                slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1}    
-                
-                // 隐藏所有图片
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                }
-                // 重置所有圆点
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                // 显示当前图片
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
-                
-                // 7秒自动切换
-                setTimeout(showSlides, 7000);
-            }
-        </script>
     </div>
+
+    <div class="sidebar">
+        <div class="sidebar-title">学术影响力</div>
+        <div class="data-row">
+            <div class="data-name">影响因子总和（IF）</div>
+            <div class="data-num">45.905</div>
+        </div>
+        <div class="data-row">
+            <div class="data-name">论文被引次数</div>
+            <div class="data-num">76</div>
+        </div>
+        <div class="source">数据来源：Google Scholar / Web of Science</div>
+    </div>
+</div>
+
+<div class="counter" id="visitCount">网站累计访问：0 次</div>
+
+<script>
+    let slideIndex=0; showSlides();
+    function plusSlides(n){showSlides(slideIndex+=n);}
+    function currentSlide(n){showSlides(slideIndex=n-1);}
+    function showSlides(){
+        let slides=document.getElementsByClassName("mySlides");
+        let dots=document.getElementsByClassName("dot");
+        slideIndex++;
+        if(slideIndex>slides.length) slideIndex=1;
+        for(let i=0;i<slides.length;i++) slides[i].style.display="none";
+        for(let i=0;i<dots.length;i++) dots[i].className=dots[i].className.replace(" active","");
+        slides[slideIndex-1].style.display="block";
+        dots[slideIndex-1].className+=" active";
+        setTimeout(showSlides,6000);
+    }
+
+    let count=localStorage.getItem("visitCount")||0;
+    count=parseInt(count)+1;
+    localStorage.setItem("visitCount",count);
+    document.getElementById("visitCount").innerText="网站累计访问："+count+" 次";
+</script>
+
 </body>
 </html>
