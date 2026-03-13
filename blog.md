@@ -5,15 +5,14 @@ permalink: /blog/
 ---
 
 <style>
-/* 科技医疗风格背景 */
 .blog-page {
   background: linear-gradient(135deg, #0f172a, #1e293b);
   min-height: 100vh;
   padding: 2rem 1rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-.blog-container {
-  max-width: 920px;
+.container {
+  max-width: 1000px;
   margin: 0 auto;
   background: rgba(255,255,255,0.96);
   padding: 2.5rem;
@@ -21,26 +20,23 @@ permalink: /blog/
   box-shadow: 0 8px 32px rgba(0,80,150,0.15);
   border-top: 5px solid #007bff;
 }
-.blog-title {
-  font-size: 2rem;
-  color: #0f172a;
+h1 {
+  color: #1e293b;
   margin-bottom: 0.5rem;
 }
-.blog-sub {
+.subtitle {
   color: #64748b;
   margin-bottom: 2rem;
 }
-
-/* 五大板块卡片 */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 .card {
   background: #f8fafc;
-  padding: 1.4rem;
+  padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
   border-left: 4px solid #007bff;
@@ -48,42 +44,42 @@ permalink: /blog/
   text-decoration: none;
   color: #1e293b;
   font-weight: 500;
+  cursor: pointer;
 }
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 14px rgba(0,100,180,0.15);
 }
-
-/* 文章板块 */
-.article {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+.section {
+  display: none;
+  margin-top: 2rem;
 }
-.article h3 {
-  font-size: 1.4rem;
-  color: #1e293b;
-  margin-top: 0;
+.section.active {
+  display: block;
+}
+.back-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.new-topic {
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 8px;
   margin-bottom: 1rem;
 }
-
-/* 可保存评论区 */
-.comment-section {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #eee;
-}
-.comment-input {
+.new-topic input, .new-topic textarea {
   width: 100%;
   padding: 10px;
+  margin-bottom: 8px;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  font-size: 14px;
+  border-radius: 6px;
 }
-.comment-btn {
+.post-btn {
   background: #007bff;
   color: white;
   border: none;
@@ -91,138 +87,187 @@ permalink: /blog/
   border-radius: 8px;
   cursor: pointer;
 }
-.comment-btn:hover {
-  background: #005cbf;
+.article {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-.comment-list {
-  margin-top: 1rem;
-  max-height: 300px;
-  overflow-y: auto;
+.article h4 {
+  margin: 0 0 0.5rem;
+  color: #1e293b;
+}
+.article p {
+  color: #475569;
+  margin-bottom: 0.8rem;
+}
+.comment-box {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #eee;
+}
+.comment-input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
 }
 .comment-item {
   background: #f8f9fa;
-  padding: 10px 14px;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-top: 6px;
   font-size: 14px;
-}
-
-.back-home {
-  color: #007bff;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 2rem;
-  display: inline-block;
 }
 </style>
 
 <div class="blog-page">
-<div class="blog-container">
+  <div class="container">
+    <h1>医聊圈</h1>
+    <p class="subtitle">临床/麻醉 · 神经科学 · 教学 · 科研 · 自由交流</p>
 
-  <h1 class="blog-title">学术博客 & 交流区</h1>
-  <p class="blog-sub">麻醉学 · 神经科学 · 教学科研 · 自由交流</p>
-
-  <!-- 五大板块 -->
-  <div class="grid">
-    <a href="#clinical" class="card">📕 临床</a>
-    <a href="#teach" class="card">🎓 教学</a>
-    <a href="#research" class="card">🔬 科研心得</a>
-    <a href="#academic" class="card">📝 学术分享</a>
-    <a href="#chat" class="card">💬 闲聊灌水</a>
-  </div>
-
-  <!-- 1 临床 -->
-  <div id="clinical" class="article">
-    <h3>📕 临床经验</h3>
-    <p>在这里记录麻醉管理、危重症、临床技术、病例思考。</p>
-    <div class="comment-section">
-      <input type="text" class="comment-input" placeholder="写下你的评论…">
-      <button class="comment-btn" onclick="addComment('clinical')">发表评论</button>
-      <div class="comment-list" id="comments-clinical"></div>
+    <!-- 板块入口 -->
+    <div id="sections" class="grid">
+      <div class="card" onclick="go('clinical')">📕 临床</div>
+      <div class="card" onclick="go('teach')">🎓 教学</div>
+      <div class="card" onclick="go('research')">🔬 科研心得</div>
+      <div class="card" onclick="go('academic')">📝 学术分享</div>
+      <div class="card" onclick="go('chat')">💬 闲聊灌水</div>
     </div>
-  </div>
 
-  <!-- 2 教学 -->
-  <div id="teach" class="article">
-    <h3>🎓 教学心得</h3>
-    <p>在这里记录授课内容、教学经验、学生培养、知识科普。</p>
-    <div class="comment-section">
-      <input type="text" class="comment-input" placeholder="写下你的评论…">
-      <button class="comment-btn" onclick="addComment('teach')">发表评论</button>
-      <div class="comment-list" id="comments-teach"></div>
+    <!-- 临床 -->
+    <div id="clinical" class="section">
+      <button class="back-btn" onclick="back()">← 返回</button>
+      <h3>📕 临床</h3>
+      <div class="new-topic">
+        <input placeholder="文章标题" id="t-clinical">
+        <textarea rows="3" placeholder="写点内容…" id="c-clinical"></textarea>
+        <button class="post-btn" onclick="post('clinical')">发布文章</button>
+      </div>
+      <div id="list-clinical"></div>
     </div>
-  </div>
 
-  <!-- 3 科研心得 -->
-  <div id="research" class="article">
-    <h3>🔬 科研心得</h3>
-    <p>在这里记录课题思路、实验进展、文献阅读、数据分析。</p>
-    <div class="comment-section">
-      <input type="text" class="comment-input" placeholder="写下你的评论…">
-      <button class="comment-btn" onclick="addComment('research')">发表评论</button>
-      <div class="comment-list" id="comments-research"></div>
+    <!-- 教学 -->
+    <div id="teach" class="section">
+      <button class="back-btn" onclick="back()">← 返回</button>
+      <h3>🎓 教学</h3>
+      <div class="new-topic">
+        <input placeholder="文章标题" id="t-teach">
+        <textarea rows="3" placeholder="写点内容…" id="c-teach"></textarea>
+        <button class="post-btn" onclick="post('teach')">发布文章</button>
+      </div>
+      <div id="list-teach"></div>
     </div>
-  </div>
 
-  <!-- 4 学术分享 -->
-  <div id="academic" class="article">
-    <h3>📝 学术分享</h3>
-    <p>在这里记录学术会议、论文写作、成果分享、行业动态。</p>
-    <div class="comment-section">
-      <input type="text" class="comment-input" placeholder="写下你的评论…">
-      <button class="comment-btn" onclick="addComment('academic')">发表评论</button>
-      <div class="comment-list" id="comments-academic"></div>
+    <!-- 科研 -->
+    <div id="research" class="section">
+      <button class="back-btn" onclick="back()">← 返回</button>
+      <h3>🔬 科研心得</h3>
+      <div class="new-topic">
+        <input placeholder="文章标题" id="t-research">
+        <textarea rows="3" placeholder="写点内容…" id="c-research"></textarea>
+        <button class="post-btn" onclick="post('research')">发布文章</button>
+      </div>
+      <div id="list-research"></div>
     </div>
-  </div>
 
-  <!-- 5 闲聊灌水 -->
-  <div id="chat" class="article">
-    <h3>💬 闲聊灌水 · 自由交流</h3>
-    <p>生活、心情、行业闲聊、轻松交流，不限主题。</p>
-    <div class="comment-section">
-      <input type="text" class="comment-input" placeholder="畅所欲言…">
-      <button class="comment-btn" onclick="addComment('chat')">发表评论</button>
-      <div class="comment-list" id="comments-chat"></div>
+    <!-- 学术 -->
+    <div id="academic" class="section">
+      <button class="back-btn" onclick="back()">← 返回</button>
+      <h3>📝 学术分享</h3>
+      <div class="new-topic">
+        <input placeholder="文章标题" id="t-academic">
+        <textarea rows="3" placeholder="写点内容…" id="c-academic"></textarea>
+        <button class="post-btn" onclick="post('academic')">发布文章</button>
+      </div>
+      <div id="list-academic"></div>
     </div>
+
+    <!-- 闲聊 -->
+    <div id="chat" class="section">
+      <button class="back-btn" onclick="back()">← 返回</button>
+      <h3>💬 闲聊灌水</h3>
+      <div class="new-topic">
+        <input placeholder="文章标题" id="t-chat">
+        <textarea rows="3" placeholder="畅所欲言…" id="c-chat"></textarea>
+        <button class="post-btn" onclick="post('chat')">发布文章</button>
+      </div>
+      <div id="list-chat"></div>
+    </div>
+
   </div>
-
-  <a href="/" class="back-home">← 返回首页</a>
-
-</div>
 </div>
 
 <script>
-// 加载评论
-function loadComments(type) {
-  let list = document.getElementById("comments-"+type);
-  let comments = JSON.parse(localStorage.getItem("comments_"+type)) || [];
-  list.innerHTML = "";
-  comments.forEach(c => {
-    let item = document.createElement("div");
-    item.className = "comment-item";
-    item.innerText = c;
-    list.appendChild(item);
+let current = "";
+
+function go(sec) {
+  current = sec;
+  document.getElementById("sections").style.display = "none";
+  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+  document.getElementById(sec).classList.add("active");
+  loadPosts(sec);
+}
+
+function back() {
+  current = "";
+  document.getElementById("sections").style.display = "grid";
+  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+}
+
+function post(sec) {
+  let title = document.getElementById("t-"+sec).value.trim();
+  let content = document.getElementById("c-"+sec).value.trim();
+  if (!title || !content) return;
+  let posts = JSON.parse(localStorage.getItem("posts_"+sec)) || [];
+  posts.push({ id: Date.now(), title, content, comments: [] });
+  localStorage.setItem("posts_"+sec, JSON.stringify(posts));
+  document.getElementById("t-"+sec).value = "";
+  document.getElementById("c-"+sec).value = "";
+  loadPosts(sec);
+}
+
+function loadPosts(sec) {
+  let container = document.getElementById("list-"+sec);
+  let posts = JSON.parse(localStorage.getItem("posts_"+sec)) || [];
+  container.innerHTML = "";
+  posts.forEach((post, idx) => {
+    let div = document.createElement("div");
+    div.className = "article";
+    div.innerHTML = `
+      <h4>${post.title}</h4>
+      <p>${post.content}</p>
+      <div class="comment-box">
+        <small>评论区</small>
+        <input class="comment-input" placeholder="写下评论…" onkeydown="if(event.key==='Enter')addComment(${idx}, this.value, '${sec}')">
+        <div id="cmt_${sec}_${idx}"></div>
+      </div>
+    `;
+    container.appendChild(div);
+    loadComments(idx, sec);
   });
 }
 
-// 添加评论
-function addComment(type) {
-  let input = document.querySelector("#"+type+" .comment-input");
-  let val = input.value.trim();
-  if (!val) return;
-  let comments = JSON.parse(localStorage.getItem("comments_"+type)) || [];
-  comments.push(val);
-  localStorage.setItem("comments_"+type, JSON.stringify(comments));
-  input.value = "";
-  loadComments(type);
+function addComment(pid, text, sec) {
+  if (!text.trim()) return;
+  let posts = JSON.parse(localStorage.getItem("posts_"+sec)) || [];
+  posts[pid].comments.push(text.trim());
+  localStorage.setItem("posts_"+sec, JSON.stringify(posts));
+  loadComments(pid, sec);
+  event.target.value = "";
 }
 
-// 初始化所有板块评论
-window.onload = () => {
-  loadComments("clinical");
-  loadComments("teach");
-  loadComments("research");
-  loadComments("academic");
-  loadComments("chat");
-};
+function loadComments(pid, sec) {
+  let posts = JSON.parse(localStorage.getItem("posts_"+sec)) || [];
+  let box = document.getElementById(`cmt_${sec}_${pid}`);
+  box.innerHTML = "";
+  posts[pid].comments.forEach(c => {
+    let item = document.createElement("div");
+    item.className = "comment-item";
+    item.innerText = c;
+    box.appendChild(item);
+  });
+}
 </script>
