@@ -302,7 +302,7 @@
 
         <!-- 赞助：支付宝 + 微信 -->
         <div class="card donate-box">
-            <div class="sidebar-title">☕ 赞助</div>
+            <div class="sidebar-title">☕ Donation 赞助</div>
             <div class="donate-desc">如果我的内容对你有帮助，欢迎支持</div>
             <div class="pay-row">
                 <div>
