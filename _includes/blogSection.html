@@ -1,13 +1,93 @@
 <style>
-  .sec-wrap{max-width:900px;margin:2rem auto;background:#fff;padding:2rem;border-radius:16px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
-  .post-box{background:#f7fafc;padding:1rem;border-radius:8px;margin-bottom:1rem;}
-  .post-box input,.post-box textarea{width:100%;padding:10px;margin-bottom:8px;border:1px solid #ddd;border-radius:6px;}
-  .post-btn{background:#007bff;color:white;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;}
-  .article{background:white;padding:1rem;border-radius:10px;margin-bottom:1rem;border-left:4px solid #007bff;box-shadow:0 1px 5px rgba(0,0,0,0.05);}
-  .comment{margin-top:10px;padding-top:10px;border-top:1px solid #eee;}
-  .comment input{width:100%;padding:6px;margin-top:6px;border-radius:6px;border:1px solid #eee;}
-  .comment-item{background:#f1f5f9;padding:6px 10px;border-radius:6px;margin-top:6px;font-size:14px;}
-  .back{margin-top:1rem;display:inline-block;color:#007bff;text-decoration:none;}
+  /* 整体美化 + 科技医疗背景 */
+  .sec-wrap{
+    max-width:900px;
+    margin:2rem auto;
+    background: #ffffff;
+    padding:2rem;
+    border-radius:18px;
+    box-shadow: 0 8px 30px rgba(0,70,150,0.15);
+    border-top: 6px solid #007bff;
+    background-image: linear-gradient(135deg, #f9fbfd 0%, #f1f7ff 100%);
+  }
+  /* 标题样式 */
+  .sec-wrap h1{
+    color: #1e293b;
+    margin-top:0;
+    font-size: 1.6rem;
+  }
+  /* 发帖盒子 */
+  .post-box{
+    background:#ffffff;
+    padding:1.2rem;
+    border-radius:12px;
+    margin-bottom:1rem;
+    border: 1px solid #e6f0ff;
+  }
+  .post-box input,
+  .post-box textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:10px;
+    border: 1px solid #dcebff;
+    border-radius:8px;
+    font-size:15px;
+    background: #fafcff;
+  }
+  .post-btn{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition: 0.2s;
+  }
+  .post-btn:hover{
+    background: #005cbf;
+  }
+  /* 文章卡片 */
+  .article{
+    background:white;
+    padding:1.4rem;
+    border-radius:12px;
+    margin-bottom:1rem;
+    border-left:5px solid #007bff;
+    box-shadow:0 2px 8px rgba(0,60,130,0.08);
+  }
+  .article h3{
+    margin-top:0;
+    color: #1e293b;
+  }
+  /* 评论区 */
+  .comment{
+    margin-top:12px;
+    padding-top:12px;
+    border-top:1px solid #eee;
+  }
+  .comment input{
+    width:100%;
+    padding:8px;
+    margin-top:8px;
+    border-radius:6px;
+    border:1px solid #eee;
+  }
+  .comment-item{
+    background:#f1f5f9;
+    padding:8px 12px;
+    border-radius:6px;
+    margin-top:6px;
+    font-size:14px;
+  }
+  /* 返回按钮 */
+  .back{
+    margin-top:1rem;
+    display:inline-block;
+    color:#007bff;
+    text-decoration:none;
+    font-weight:bold;
+  }
 </style>
 
 <div class="sec-wrap">
