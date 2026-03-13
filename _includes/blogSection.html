@@ -66,7 +66,6 @@
   background:#ffebee; padding:12px; border-radius:10px; margin-bottom:10px; font-size:14px;
 }
 
-/* 👇 5 大板块独立主题色 👇 */
 .sec-wrap.clinical {
   background: linear-gradient(135deg, #f0f9ff 0%, #d1e7ff 100%);
   border-top-color: #007bff;
@@ -101,13 +100,12 @@
 .chat .post-btn{background:#ffb100}
 </style>
 
-<!-- 👇 自动给板块加颜色类 👇 -->
 <div class="sec-wrap {{ include.id }}">
   <h1>{{ include.title }}</h1>
   <div id="guestNotice"></div>
   <div id="adminArea"></div>
 
-  <div class="post-box" id="postArea" style="display:none;">
+  <div class="post-box" id="postArea">
     <input placeholder="输入邀请码" id="inviteCode">
     <input placeholder="你的昵称（仅管理员可见）" id="authorName">
     <input placeholder="文章标题" id="title-{{ include.id }}">
@@ -158,11 +156,17 @@ function canComment() {
 
 function submitPost() {
   let code = document.getElementById("inviteCode").value;
-  if (code !== INVITE_CODE) return alert("邀请码错误");
+  if (code !== INVITE_CODE) {
+    alert("邀请码错误");
+    return;
+  }
   let t = document.getElementById("title-"+sec).value.trim();
   let c = document.getElementById("content-"+sec).value.trim();
   let a = document.getElementById("authorName").value.trim() || "Guest";
-  if (!t || !c) return alert("请填写标题和内容");
+  if (!t || !c) {
+    alert("请填写标题和内容");
+    return;
+  }
 
   let pending = JSON.parse(localStorage.getItem("pending_"+sec))||[];
   pending.push({
@@ -198,7 +202,10 @@ function loadPosts() {
 }
 
 function cmt(pid, txt) {
-  if (!canComment()) return alert("今日评论名额已满！");
+  if (!canComment()) {
+    alert("今日评论名额已满！");
+    return;
+  }
   if (!txt) return;
   let posts = JSON.parse(localStorage.getItem("published_"+sec))||[];
   posts[pid].comments.push(txt.trim());
@@ -231,8 +238,8 @@ function showAdmin() {
     </div>`;
   });
   document.getElementById("adminArea").innerHTML = html+"</div>";
-  document.getElementById("postArea").style.display = "block";
 }
+
 function ok(idx) {
   let p = JSON.parse(localStorage.getItem("pending_"+sec))||[];
   let pub = JSON.parse(localStorage.getItem("published_"+sec))||[];
@@ -242,7 +249,8 @@ function ok(idx) {
   p.splice(idx,1);
   localStorage.setItem("pending_"+sec, JSON.stringify(p));
   localStorage.setItem("published_"+sec, JSON.stringify(pub));
-  showAdmin(); loadPosts();
+  showAdmin();
+  loadPosts();
 }
 function no(idx) {
   let p = JSON.parse(localStorage.getItem("pending_"+sec))||[];
