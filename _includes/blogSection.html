@@ -120,7 +120,7 @@
 
 <script>
 const sec = '{{ include.id }}';
-const INVITE_CODE = "giveme50";
+const INVITE_CODE = "微我50";
 const ADMIN_PASS = "258046";
 const MAX_GUEST_PER_DAY = 5;
 
@@ -156,14 +156,22 @@ function canComment() {
 }
 
 function submitPost() {
-  let code = document.getElementById("inviteCode").value;
-  if (code !== INVITE_CODE) {
-    alert("邀请码错误");
+  let codeInput = document.getElementById("inviteCode");
+  if (!codeInput) {
+    alert("系统错误，请刷新重试");
     return;
   }
+  let code = codeInput.value.trim();
+
+  if (code !== INVITE_CODE) {
+    alert("邀请码错误，请重新输入");
+    return;
+  }
+
   let t = document.getElementById("title-"+sec).value.trim();
   let c = document.getElementById("content-"+sec).value.trim();
   let a = document.getElementById("authorName").value.trim() || "Guest";
+
   if (!t || !c) {
     alert("请填写标题和内容");
     return;
